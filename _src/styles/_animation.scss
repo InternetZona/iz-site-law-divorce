@@ -1,0 +1,179 @@
+@keyframes animate {
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/*
+  * Sonar effect
+ */
+.effect__sonar {
+  display: block;
+  cursor: pointer;
+  margin: 15px auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+  transition: transform ease-out 0.1s, all 0.2s;
+
+  &:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    box-sizing: content-box;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: -1;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  &--activated {
+    background: rgba(255,255,255,0.05);
+    transform: scale(0.93);
+    color: #fff;
+
+    @extend %sonar-activated;
+  }
+}
+
+%sonar-activated:after {
+  animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+$sonar-color: $custom-color-1 !default;
+
+@keyframes sonarEffect {
+  0% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px $sonar-color, 0 0 0 5px rgba(255,255,255,0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 0 5px 5px $sonar-color, 0 0 0 5px rgba(255,255,255,0.5);
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+
+/*
+  * Link Rolling
+ */
+
+.effect {
+  &--link-rolling {
+    perspective: 1500px;
+
+    a {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s;
+      transform-origin: 50% 0;
+      transform-style: preserve-3d;
+
+      &:before {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 15px;
+        background: darken($primary-color, 5%);
+        content: attr(data-hover);
+        transition: background 0.3s;
+        transform: rotateX(-90deg);
+        transform-origin: 50% 0;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+      a {
+        transform: rotateX(90deg) translateY(-22px);
+        background: darken($primary-color, 5%);
+      }
+    }
+  }
+}
+
+/*
+  * Button bg diagonale
+ */
+
+.effect {
+  &--bg-inverse-diagonale {
+
+    &:after{
+      content: '';
+      position: absolute;
+      z-index: -1;
+      transition: all 0.3s;
+      width: 100%;
+      height: 0;
+      top: 50%;
+      left: 50%;
+      background: $primary-color;
+      opacity: 0;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+
+    &:hover{
+      &:after {
+        height: 260%;
+        opacity: 1;
+      }
+    }
+    &:active{
+      &:after {
+        height: 400%;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.effect {
+  &__brackets{
+    &:before{
+      display: inline-block;
+      opacity: 0;
+      transition: transform 0.3s, opacity 0.2s;
+      margin-right: 10px;
+      content: '[';
+      transform: translateX(20px);
+    }
+    &:after {
+      display: inline-block;
+      opacity: 0;
+      transition: transform 0.3s, opacity 0.2s;
+      margin-left: 10px;
+      content: ']';
+      transform: translateX(-20px);
+    }
+
+    &--active {
+      &:after,
+      &:before {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.footer {
+  @extend .page-footer;
+
+  .footer__copyright{
+    @extend .container;
+    @extend .footer-copyright;
+    font-size: .8rem;
+  }
+}

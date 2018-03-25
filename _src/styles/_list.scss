@@ -1,0 +1,42 @@
+.list{
+  &--contacts{}
+  &__item{
+    margin-top: .8rem;
+    font-size: 1.2rem;
+    &--icon{
+      position: relative;
+      padding-left: 40px;
+    }
+  }
+}
+
+// costomizing
+
+.list--contacts {
+  margin-top: 2rem;
+   .list__item{
+     span {
+       font-size: 1rem;
+       display: inline-block;
+       width: 100%;
+     }
+   }
+  .list__item--icon{
+    color: color('grey', 'darken-4');
+    a{
+      color: color('grey', 'darken-4');
+      opacity:1;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: .85;
+      }
+    }
+    i{
+      position: absolute;
+      left: 2px;
+      color: color('grey', 'lighten-1');
+    }
+  }
+}

@@ -1,0 +1,1 @@
+<div id="modal-portfolio-lightbox-{$id}" class="modal modal--lightbox"><div class="modal-content">{snippet name="phpthumbof" params=[ "input" => $img, "options" => "&w=480&h=640&zc=0&aoe=0&far=0&q=70" ] assign=thumb} <img class="responsive-img" src="{$thumb}"></div></div>

@@ -1,0 +1,24 @@
+.featured{
+  background: transparent;
+
+  * {
+    cursor: default!important;
+  }
+
+  &:hover{
+    .effect__sonar {
+      @extend  .effect__sonar--activated;
+    }
+  }
+
+  .card-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.4rem;
+  }
+
+  .card-reveal{
+    border: 2px solid $custom-color-1;
+  }
+}

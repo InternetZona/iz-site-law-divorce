@@ -1,0 +1,47 @@
+{
+  "name": "iz-materializecss-starter-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InternetZona/iz-materializecss-starter-kit.git"
+  },
+  "keywords": [
+    "starter-kit"
+  ],
+  "author": "Alexandr Krohamlnyy (magr0s)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/InternetZona/iz-materializecss-starter-kit/issues"
+  },
+  "homepage": "https://github.com/InternetZona/iz-materializecss-starter-kit#readme",
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-compass": "^2.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rigger": "^0.5.8",
+    "gulp-size": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "materialize-css": "^1.0.0-alpha.4",
+    "path": "^0.12.7",
+    "run-sequence": "^2.2.1"
+  },
+  "devDependencies": {
+    "imask": "^3.1.2"
+  }
+}

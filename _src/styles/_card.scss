@@ -1,0 +1,163 @@
+.card {
+  &--blog {
+    .card-image {
+      > a {
+        position: relative;
+
+        &:after{
+          content: "";
+          position: absolute;
+          left: 1rem;
+          top: 1rem;
+          right: 1rem;
+          bottom: 1rem;
+          background-color: transparent;
+          border: 2px solid white;
+        }
+      }
+    }
+  }
+
+  &--service{
+    .card-content {
+      p{
+        font-size: .9rem;
+
+        > a {
+          font-size: .85rem;
+          display: inline-block;
+          margin-left: 4px;
+        }
+      }
+    }
+    .card-action{
+      line-height:36px;
+      padding: 16px;
+
+      .service--cost {
+        font-size: 1.2rem;
+        font-weight: bold;
+
+        @media #{$small-and-down} {
+          font-size: 1rem;
+        }
+      }
+      .action--text {
+        @media #{$small-and-down} {
+          display: none;
+        }
+      }
+
+      .btn {
+        @media #{$small-and-down} {
+          height: 32.4px;
+          line-height:32.4px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .card-content {
+    &--size-m{
+      padding: 12px !important;
+    }
+    &--size-s{
+      padding: 6px !important;
+    }
+    &--size-xs{
+      padding: 0 6px !important;
+    }
+  }
+
+  &--bordered{
+    border: 2px solid $custom-color-1;
+  }
+
+  &--customize-testimonials {
+    height: 100%;
+    margin-top: 0;
+    position: relative;
+    padding-bottom: 35px;
+    .card-content{
+      padding-bottom: 16px;
+      p{
+        font-size: .9rem !important;
+      }
+    }
+    .card-action{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0 24px;
+      p{
+        text-align: center;
+
+        font-size: .8rem !important;
+      }
+    }
+  }
+
+  &--customize-portfolio {
+    padding: .5rem;
+    height: 100%;
+    margin: 0;
+    border: 2px solid $custom-color-1;
+    @extend .z-depth-0;
+
+    @media #{$small-and-down} {
+      display: block!important;
+    }
+
+    .card-image {
+      max-width: 40%;
+
+      @media #{$small-and-down} {
+        max-width: 100%;
+
+        img {
+          margin:0 auto!important;
+        }
+      }
+    }
+
+    .card-content {
+      font-size: .8rem;
+      @media #{$medium-and-up} {
+        padding: 0 0 0 24px;
+      }
+      strong {
+        font-weight: bold;
+      }
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+
+  &--alert {
+    margin-bottom: 0;
+    margin-top: 2rem;
+    @extend .z-depth-0;
+    @extend .center-align;
+    border: 2px solid $custom-color-1;
+
+    .card-content {
+      text-align: center;
+
+      span {
+        @extend .h4;
+        line-height:36px;
+        background: white;
+        position: relative;
+        @extend .effect__brackets;
+      }
+
+      &:hover {
+        span {
+          @extend .effect__brackets--active;
+        }
+      }
+    }
+  }
+}

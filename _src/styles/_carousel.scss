@@ -1,0 +1,45 @@
+.carousel {
+  &--testimonials {
+    height: auto;
+
+    .card{
+      margin: 0;
+
+      .card-action{
+        p{
+          margin: 0;
+        }
+      }
+    }
+
+    .indicators {
+      bottom: -10px;
+
+      .indicator-item{
+        width: 16px;
+        height: 4px;
+        border-radius: 0;
+        background-color: rgba($secondary-color, .2);
+
+        &.active{
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+  &__item{
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 100% !important;
+    //padding-bottom: 62px;
+
+    &--cols-2 {
+      @media #{$medium-only} {
+        width: calc(100%/2) !important;
+      }
+      @media #{$large-and-up} {
+        width: calc(100%/3) !important;
+      }
+    }
+  }
+}

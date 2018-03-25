@@ -1,0 +1,1 @@
+<li class="effect--link-rolling [[+wf.classnames]]"><a href="#[[+wf.attributes]]" class="nav__link--scrollable scrollable" data-hover="[[+wf.linktext]]">[[+wf.linktext]]</a></li>

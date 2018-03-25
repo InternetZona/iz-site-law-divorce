@@ -1,0 +1,21 @@
+.grid {
+  @extend .row;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  &__cell {
+    @extend .col;
+    margin-left: 0!important;
+    margin-bottom: 20px;
+  }
+}
+.container{
+  padding-left: .75rem;
+  padding-right: .75rem;
+  .grid,
+  .row{
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+  }
+}
