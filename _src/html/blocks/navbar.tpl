@@ -19,13 +19,9 @@
                 <small>Расторжение брака</small>
             </a>
         {/if}
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <a href="#" data-target="sidenav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="nav--desktop">
             {snippet name="Wayfinder@{$config}"}
         </ul>
     </div>
 </nav>
-
-<ul class="sidenav">
-    {snippet name="Wayfinder@{$config}"}
-</ul>

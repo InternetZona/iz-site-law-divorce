@@ -1,10 +1,17 @@
 function _dropdown() {
-    var elem = document.querySelector('.dropdown-trigger'),
+    var elems = document.querySelectorAll('.dropdown-trigger'),
         options = {
             constrainWidth: false,
             coverTrigger: false,
             container: 'body',
-            hover: true
         };
-    var instance = M.Dropdown.init(elem, options);
+    
+    [].forEach.call(elems, function(elem) {
+
+        if (elem.dataset.target == 'nav-desktop-dd') {
+            options.hover = true;
+        }
+
+        var instance = M.Dropdown.init(elem, options);
+    });
 }
