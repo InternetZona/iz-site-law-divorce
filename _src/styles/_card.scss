@@ -150,13 +150,6 @@
         line-height:36px;
         background: white;
         position: relative;
-        @extend .effect__brackets;
-      }
-
-      &:hover {
-        span {
-          @extend .effect__brackets--active;
-        }
       }
     }
   }
