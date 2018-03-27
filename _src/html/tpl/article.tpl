@@ -13,7 +13,7 @@
             </div>
             <div class="col l4">
                 <aside>
-                    <div class='h5'>Услуги</div>
+                    <div class='h5 center-align'>Услуги</div>
                     {include file="blocks/widgets/service.tpl" }
                 </aside>
             </div>
