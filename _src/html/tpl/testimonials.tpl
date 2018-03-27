@@ -10,7 +10,7 @@
 
             {if is_array($tvTestimonials)}
                 {foreach $tvTestimonials as $data}
-                    <div class="grid__cell s12 m6 l4 xl3" style="margin-bottom: 20px;">
+                    <div class="grid__cell s12 m6 l4" style="margin-bottom: 20px;">
                         <div class="card card--bordered z-depth-0 card--customize-testimonials">
                             <div class="card-content">
                                 <p>{$data.text}</p>

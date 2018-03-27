@@ -18,7 +18,7 @@
                     {$tvTestimonials = $object.tvs.testimonials.value|json_decode:true|array_slice:-10}
 
                     {if is_array($tvTestimonials)}
-                        <div id="carousel-testimonials" class="carousel carousel--testimonials carousel-slider center" data-speed="4000">
+                        <div id="carousel-testimonials" class="carousel carousel--testimonials carousel-slider" data-speed="4000">
 
                             {foreach $tvTestimonials as $data}
                                 <div class="carousel-item carousel__item carousel__item--cols-2" href="#slide-{$data.MIGX_id}">
