@@ -42,6 +42,14 @@
     }
   }
   &__content {
+    a{
+      text-decoration: underline;
+      &:hover,
+      &:focus,
+      &:active{
+        text-decoration: none;
+      }
+    }
     ul{
       li{
         position:relative;
