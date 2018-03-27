@@ -1,9 +1,21 @@
 .form {
   &-wrapper{
-    padding: 1rem;
+    padding: .5rem;
     margin: .5rem;
     background: white;
     @extend .z-depth-3;
+
+    &--order-form {
+      form {
+        padding: 1rem;
+        border: 2px solid $secondary-color;
+      }
+    }
+
+    .form--feedback{
+      padding: 1rem;
+      border: 2px solid $secondary-color;
+    }
   }
 
   .form--order {
