@@ -1,5 +1,4 @@
-<div id="contacts" class="section-wrapper">
-    <section class="section section--contacts section--style-zigzag">
+<section class="section section--contacts">
         <div class="container">
             <div class="section__content">
                 <div class="row">
@@ -35,5 +34,4 @@
             </div>
         </div>
     </section>
-</div>
 <div id="yandex-map" style="height: 400px;" class="no-bottom-margin"></div>

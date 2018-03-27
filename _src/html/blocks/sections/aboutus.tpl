@@ -9,7 +9,7 @@
 {if $result.success && $result.count > 0}
     {$object = $result.object}
 
-    <section id="{$object.link_attributes}" class="section section--about">
+    <section id="{$object.link_attributes}" class="section section--about grey-lighten">
         <div class="container">
             <div class="section__title section__title--styled">
                 <span>{$object.pagetitle}</span>

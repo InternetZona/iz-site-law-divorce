@@ -23,6 +23,8 @@
 
     {include file="blocks/sections/price.tpl"}
 
+    {include file="blocks/sections/aboutus.tpl"}
+
     <div class="section-wrapper grey-lighten section--form">
         <section class="section section--order section--inverse section--style-doublediagonal">
             <div class="container">
@@ -53,8 +55,6 @@
     {include file="blocks/sections/portfolio.tpl"}
 
     {include file="blocks/sections/blog.tpl"}
-
-    {include file="blocks/sections/aboutus.tpl"}
 
     {include file="blocks/sections/contacts.tpl"}
 {/block}
