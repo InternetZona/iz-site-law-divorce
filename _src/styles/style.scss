@@ -123,14 +123,25 @@ h1,h2,h3,h4,h5,h6{
 .widget {
   &__services {
     @media #{$large-and-up} {
-      .service--cost{
-        display: block;
-        font-size: 1.1rem;
+      .card-action {
+        text-align:center!important;
+        .service--cost{
+          display: block;
+          font-size: 1.1rem;
+          margin-bottom: 10px;
+        }
+
+        a{ float: none!important; }
+
       }
       .card-wrapper {
         .card {
           .card-content {
-            padding-bottom: 110px;
+            padding-bottom: 120px;
+
+            @media #{$large-and-up} {
+              padding-bottom: 130px;
+            }
           }
         }
       }
