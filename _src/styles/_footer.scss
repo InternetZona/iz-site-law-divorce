@@ -1,5 +1,6 @@
 .footer {
   @extend .page-footer;
+  padding-top: 0!important;
 
   .footer__copyright{
     @extend .container;
