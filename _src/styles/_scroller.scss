@@ -1,0 +1,17 @@
+.scroller {
+  @extend .fixed-action-btn;
+  visibility: hidden;
+
+  &__item {
+    opacity: .5;
+    background: $custom-color-1 !important;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &--active {
+    visibility: visible;
+  }
+}

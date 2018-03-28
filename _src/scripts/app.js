@@ -50,6 +50,27 @@ var App = {
           } else {
               document.body.classList.remove('page--sticky-header');
           }
+
+          if (window.pageYOffset > 250) {
+              document.querySelector('.scroller')
+                  .classList.add('scroller--active');
+          } else {
+              document.querySelector('.scroller')
+                  .classList.remove('scroller--active');
+          }
+      }
+
+      var scroller = document.querySelector('.scroller');
+
+      if (scroller !== null) {
+          scroller.onclick = function(event) {
+              event.preventDefault();
+              TweenLite.to(window, 1, {
+                  scrollTo:{
+                      y: 0
+                  }
+              });
+          }
       }
 
       var phoneInputs = document.querySelectorAll('input[type="tel"]');

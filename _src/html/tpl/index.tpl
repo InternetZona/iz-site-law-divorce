@@ -14,6 +14,12 @@
         {$smarty.block.child}
     {/block}
 
+    <div class="scroller">
+        <a href="#" class="scroller__item btn-floating btn-large btn-flat btn-small waves-effect waves-light">
+            <i class="material-icons">keyboard_arrow_up</i>
+        </a>
+    <div>
+
     <!-- Core javascript file -->
     <script async src="{$template_url}js/app.min.js?{filemtime(MODX_BASE_PATH|cat:$template_url|cat:'js/app.min.js')}"></script>
 </body>
