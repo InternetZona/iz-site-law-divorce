@@ -29,7 +29,7 @@ gulp.task('styles', () => {
     ];
 
     return gulp.src('./styles/style.scss')
-        .pipe($.sourcemaps.init())
+        //.pipe($.sourcemaps.init())
         .pipe($.compass({
             project: path.join(__dirname),
             css: './_css',
@@ -39,31 +39,31 @@ gulp.task('styles', () => {
         .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
         .pipe($.if('*.css', $.cssnano()))
         .pipe($.size({title: 'styles'}))
-        .pipe($.sourcemaps.write())
+        //.pipe($.sourcemaps.write())
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest(settings.assets + '/css'))
-        .pipe($.notify({
-            message: 'Styles task complete'
-        }));
+        .pipe(gulp.dest(settings.assets + '/css'));
+        //.pipe($.notify({
+        //    message: 'Styles task complete'
+        //}));
 });
 
 // Concatenate and minify JavaScript
 gulp.task('scripts', () => {
     gulp.src('./scripts/app.js')
         .pipe($.rigger())
-        .pipe($.sourcemaps.init())
+        //.pipe($.sourcemaps.init())
         .pipe($.uglify())
         .pipe($.size({title: 'scripts'}))
         .pipe($.rename({
             suffix: '.min'
         }))
-        .pipe($.sourcemaps.write())
-        .pipe(gulp.dest(settings.assets + '/js'))
-        .pipe($.notify({
-            message: 'Scripts task complete'
-        }));
+        //.pipe($.sourcemaps.write())
+        .pipe(gulp.dest(settings.assets + '/js'));
+        //.pipe($.notify({
+        //    message: 'Scripts task complete'
+        //}));
 });
 
 // Minify any .tpl
@@ -83,10 +83,10 @@ gulp.task('html', () => {
         })))
         // Output files
         .pipe($.if('*.tpl', $.size({title: 'html', showFiles: true})))
-        .pipe(gulp.dest(settings.core))
-        .pipe($.notify({
-            message: 'Html task complete'
-        }));
+        .pipe(gulp.dest(settings.core));
+        //.pipe($.notify({
+        //    message: 'Html task complete'
+        //}));
 });
 
 // Optimize images
