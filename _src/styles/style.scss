@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+/*
+  Custom variables settings section
+ */
+
+$font-stack: -apple-system, BlinkMacSystemFont, 'Merriweather', sans-serif !default;
+$h1-fontsize: 2.6rem !default;
+$h2-fontsize: 2.2rem !default;
+$h3-fontsize: 1.9rem !default;
+$h4-fontsize: 1.6rem !default;
+$h5-fontsize: 1.3rem !default;
+$h6-fontsize: 1rem !default;
+
+//$primary-color: #0091ea !default;
+$primary-color: #01579b !default;
+$secondary-color: #d50000 !default;
+$custom-color-1: #2a97d7 !default;
+$link-color: $secondary-color !default;
+$grey-lighten: #f3f3f3 !default;
+
+// Initialize Compass sprites
+@import "compass/utilities/sprites";
+@import "./_sprites/*.png";
+
+// Import materialize-css library
+@import '../node_modules/materialize-css/sass/materialize';
+
+// Import project styles
+@import 'animation';
+@import 'page';
+@import 'header';
+@import 'navbar';
+@import 'section';
+@import 'footer';
+@import 'grid';
+@import 'form';
+@import 'carousel';
+@import 'list';
+@import 'modal';
+@import 'button';
+@import 'card';
+@import 'table';
+@import 'image';
+@import 'featured';
+@import 'magnific-popup';
+@import 'lightbox-gallery';
+@import 'fontello';
+@import 'scroller';
+
+.grey-lighten {
+  background: $grey-lighten;
+}
+
+.custom-color-1 {
+  background: $custom-color-1;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+}
+
+.h1{ @extend h1; }
+.h2{ @extend h2; }
+.h3{ @extend h3; }
+.h4{ @extend h4; }
+.h5{ @extend h5; }
+.h6{ @extend h6; }
+
+.nav {
+  .brand-logo {
+    padding-left: 45px;
+    font-size: 1.8rem;
+    line-height: 45px;
+
+    img{
+      position: absolute;
+      height: 40px;
+      top: 8px;
+      left: 0;
+    }
+
+    small {
+      position: absolute;
+      font-size: .8rem;
+      bottom: -9px;
+      line-height: 1;
+      right: 0;
+    }
+  }
+}
+
+.dropdown-trigger{
+  outline: 0!important;
+}
+
+.dropdown-content{
+  > li{
+    &:hover{
+      background: rgba($custom-color-1, .8);
+      > a{
+        color: white;
+      }
+    }
+    &.active{
+      background: $custom-color-1;
+      > a{
+        color: white;
+      }
+    }
+    > a{
+      color: $custom-color-1;
+    }
+  }
+}
+
+.no-bottom-margin{
+  margin-bottom: 0 !important;
+}
+
+.container {
+  width:75%;
+}
+
+.widget {
+  &__services {
+    @media #{$large-and-up} {
+      .card-action {
+        text-align:center!important;
+        .service--cost{
+          display: block;
+          font-size: 1.1rem;
+          margin-bottom: 10px;
+        }
+
+        a{ float: none!important; }
+
+      }
+      .card-wrapper {
+        .card {
+          .card-content {
+            padding-bottom: 120px;
+
+            @media #{$large-and-up} {
+              padding-bottom: 130px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.small {
+  font-size: .8rem!important;
+  line-height:1rem!important;
+}

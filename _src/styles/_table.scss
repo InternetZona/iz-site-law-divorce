@@ -1,0 +1,21 @@
+.table-wrapper{
+  @media #{$medium-and-up} {
+    padding: 1rem;
+    border: 2px solid $custom-color-1;
+  }
+}
+
+table {
+  tr{
+    td{
+
+      @media #{$medium-and-down} {
+        font-size: .85rem;
+      }
+
+      &:last-child {
+        white-space: nowrap;
+      }
+    }
+  }
+}

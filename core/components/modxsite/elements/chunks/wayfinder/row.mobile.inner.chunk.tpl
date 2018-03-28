@@ -1,0 +1,1 @@
+<li class="[[+wf.classnames]]"><a href="[[+wf.link]]" class="nav__link" data-hover="[[+wf.linktext]]">[[+wf.linktext]]</a></li>

@@ -1,0 +1,26 @@
+.modal {
+  max-height: 85%;
+
+  .modal--close {
+    color: rgba(black, .2);
+    opacity: 1;
+
+    :hover{
+      opacity: .85;
+    }
+
+  }
+  &--tiny{
+    @media #{$large-and-up} {
+      width: 35%;
+    }
+  }
+
+  &__header {
+    @extend h5;
+    text-align: center;
+    padding-bottom: .35rem;
+    border-bottom: 2px solid color('grey', 'lighten-3');
+  }
+  &__body {}
+}

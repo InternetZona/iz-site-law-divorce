@@ -1,0 +1,17 @@
+.btn{
+  &--viewmore{
+    background-color: white !important;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+
+    &:not(:hover) {
+      box-shadow: none;
+    }
+
+    &:focus,
+    &:hover,
+    &:active{
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.nav{
+  position: relative;
+  z-index: 10;
+  transition: all .2s ease-out .1s;
+
+  .sidenav-trigger {
+    @media #{$small-and-down} {
+      margin-left: 8px;
+    }
+  }
+
+  &-wrapper{
+    @extend .container;
+    @media (max-width: $large-screen) {
+      width: 96% !important;
+    }
+  }
+
+  &--desktop{
+    @extend .right;
+    @extend .hide-on-med-and-down;
+  }
+  .nav--desktop {
+
+    li.active{
+      > .dropdown-trigger {
+        transform: none;
+
+        &:after{
+          content: '\e5c5';
+          font-family: 'Material Icons';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0 15px;
+          background: darken($primary-color, 5%);
+          transition: background 0.3s;
+          transform: rotateX(90deg) translateY(-22px);
+          transform-origin: 50% 0;
+          text-align: right;
+          font-size: 24px;
+        }
+
+        &:before{
+          transform: rotateX(-89deg) translateY(-27px);
+          top: 0;
+        }
+      }
+    }
+  }
+
+  li:not(.active){
+    .dropdown-trigger {
+      &:hover {
+        &:after {
+          content: '\e5c5';
+          font-family: 'Material Icons';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0 15px;
+          background: transparent;
+          transition: background 0.3s;
+          transform: rotateX(-90deg) translateY(0);
+          transform-origin: 50% 0;
+          text-align: right;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+.sidenav {
+  padding-top: 115px;
+
+  > li{
+    &:hover{
+      background: rgba($custom-color-1, .8);
+      > a{
+        color: white;
+      }
+    }
+    &.active{
+      background: $custom-color-1;
+      > a{
+        color: white;
+      }
+    }
+    > a{
+      color: $custom-color-1;
+    }
+  }
+
+  .collapsible {
+    background: white;
+
+    > li {
+      background: transparent!important;
+
+      .collapsible-header {
+        padding: 0 32px!important;
+        color: $custom-color-1;
+      }
+
+      .collapsible-body {
+        .navbar-mobile-inner {
+          a{
+            font-size: .9rem!important;
+          }
+        }
+      }
+    }
+  }
+}

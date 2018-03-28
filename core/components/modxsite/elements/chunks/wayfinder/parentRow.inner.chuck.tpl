@@ -1,0 +1,1 @@
+<li class="effect--link-rolling [[+wf.classnames]]"><a class="dropdown-trigger" href="javascript:void(0);" data-hover="[[+wf.linktext]]" data-target="nav-desktop-dd">[[+wf.linktext]]<i class="material-icons right">arrow_drop_down</i></a>[[+wf.wrapper]]</li>
