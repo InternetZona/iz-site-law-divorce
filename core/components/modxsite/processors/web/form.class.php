@@ -29,9 +29,19 @@ class modWebFormProcessor extends modSiteWebFormProcessor
         return parent::initialize() && !$this->hasErrors();
     }
 
-    protected function getManagerMailSubject(){
-        $site_name = $this->modx->getOption('site_name');
-        $subject = "Сообщение с сайта {$site_name}";
+    protected function getManagerMailSubject()
+    {
+        switch ($this->getProperty('template')) {
+            case 'order':
+                $subject = "Заказ услуги на сайте Разводы.";
+                break;
+            case 'feedback':
+                $subject = "Вопрос с сайта Разводы.";
+                break;
+            default:
+                $site_name = $this->modx->getOption('site_name');
+                $subject = "Сообщение с сайта {$site_name}";
+        }
         return $subject;
     }
 

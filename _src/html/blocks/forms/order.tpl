@@ -1,6 +1,7 @@
 {$key = rand()}
 <form name="order" class="form form--order">
     <input type="hidden" name="action" value="form">
+    <input type="hidden" name="service" value="{field name=id}">
     <div class="row">
         <div class="input-field col s12">
             <input id="name-{$key}" type="text" name="username">

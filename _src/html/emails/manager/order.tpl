@@ -4,9 +4,9 @@
     <p>Заказ услуги от посетителя сайта.</p>
     {if $properties.service}
         {if $object = $modx->getObject('modResource', $properties.service)}
-            <ul style="list-style: none;">
-                <li><strong>Услуга: </strong>{$object.pagetitle}</li>
-            </ul>
+            <p>Заказана услуга: {$object->pagetitle}</p>
+        {else}
+            <p>Заказ услуги от посетителя сайта.</p>
         {/if}
     {/if}
     {if $properties.comment}
