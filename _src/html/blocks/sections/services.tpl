@@ -23,7 +23,7 @@
                                             <p>{$object.tvs.shortDescription.value} <a href="{$object.uri}">Подробнее</a></p>
                                         </div>
                                         <div class="card-action left-align">
-                                            <a data-service-title="{$object.pagetitle}" data-service-start-cost="{$object.tvs.startCost.value|default:0}" data-service-cost="{$object.tvs.cost.value|default:0}" href="#modal-service" class="btn waves-effect waves-light right modal-trigger">Заказать</a>
+                                            <a data-service-id="{$object.id}" href="#modal-service" class="btn waves-effect waves-light right modal-trigger">Заказать</a>
                                             <span class="action--text">Стоимость: </span><span class="service--cost">{if $object.tvs.startCost.value == 1}от {/if}{$object.tvs.cost.value|default:0|number_format:0:",":" "} руб</span>
                                         </div>
                                     </div>
