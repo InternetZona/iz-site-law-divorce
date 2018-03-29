@@ -51,6 +51,20 @@ function _jqPluginsInit() {
 
                                         if (response.success) {
 
+                                            switch ($form.attr('name')) {
+                                                case "feedback":
+                                                    gtag('event', 'send', {'event_category': 'form-feedback'});
+                                                    yaCounter48211868.reachGoal('form-feedback');
+                                                    break;
+
+                                                case 'order':
+                                                    gtag('event', 'send', {'event_category': 'form-order'});
+                                                    yaCounter48211868.reachGoal('form-order');
+                                                    break;
+
+                                                default:
+                                            }
+
                                             M.toast({
                                                 html: 'Сообщение успешно отправлено!'
                                             });
