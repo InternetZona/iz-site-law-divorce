@@ -32,7 +32,28 @@ function _jqPluginsInit() {
 
                     [].forEach.call(forms, function(elem) {
 
-                        $(elem).validate({
+                        var rules = {
+                            phone: {
+                                require_from_group: [1, ".require-group"]
+                            },
+                            email: {
+                                require_from_group: [1, ".require-group"],
+                                email: true
+                            },
+                            confirm: {
+                                required: true
+                            }
+                        };
+
+                        if (elem.name === 'feedback') {
+                            rules.comment = {
+                                required: true
+                            }
+                        }
+
+
+
+                        var validator = {
                             ignore: [],
                             submitHandler: function(form)   {
 
@@ -103,21 +124,11 @@ function _jqPluginsInit() {
                                     .append(error);
                                 return true;
                             },
+                            focusInvalid: false,
                             errorClass: 'error',
                             validClass: '',
                             errorElement: 'span',
-                            rules: {
-                                phone: {
-                                    require_from_group: [1, ".require-group"]
-                                },
-                                email: {
-                                    require_from_group: [1, ".require-group"],
-                                    email: true
-                                },
-                                confirm: {
-                                    required: true
-                                }
-                            },
+                            rules: rules,
                             messages: {
                                 phone: {
                                     require_from_group: "Укажите ваш номер телефона."
@@ -126,11 +137,16 @@ function _jqPluginsInit() {
                                     require_from_group: "Укажите ваш E-mail.",
                                     email: "Неправильный формат электронной почты."
                                 },
+                                comment: {
+                                    required: "Напишите текст вашего сообщения."
+                                },
                                 confirm: {
                                     required: "Подтвердите согласие с политикой сайта."
                                 }
                             }
-                        });
+                        };
+
+                        $(elem).validate(validator);
                     })
                 })
             })
