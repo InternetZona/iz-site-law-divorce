@@ -150,11 +150,17 @@
     .card-content {
       text-align: center;
 
-      span {
-        @extend .h4;
-        line-height:36px;
-        background: white;
-        position: relative;
+      p{
+        @media (max-width: 1409px) {
+          margin-top: 1rem;
+        }
+
+        @media (min-width: 1410px) {
+          display: inline-block;
+          margin-left: 2rem;
+          line-height: 30px;
+          height: 36px;
+        }
       }
     }
   }

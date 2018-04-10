@@ -11,7 +11,7 @@
                             <p>
                                 {field name=introtext}
                             </p>
-                            {include file="blocks/sections/cost.tpl"}
+                            {include file="blocks/sections/callback.tpl"}
 
                         </div>
                     </div>
