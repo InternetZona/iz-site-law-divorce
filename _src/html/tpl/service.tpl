@@ -31,6 +31,10 @@
         </div>
     </div>
 
+    <div class="section container">
+        {include file="blocks/widgets/service.panel.tpl"}
+    </div>
+
     {assign var=params value=[
         'id'    => 7,
         'current'   => true,
@@ -82,4 +86,8 @@
             </div>
         </section>
     </div>
+{/block}
+
+{block name=modals append}
+    {include file="blocks/modals/service.tpl"}
 {/block}
