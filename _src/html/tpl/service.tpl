@@ -16,7 +16,7 @@
                         </div>
                     </div>
                     {snippet name="phpthumbof" params=[
-                    "input" => "{$template_url}images/peoples/w01.png",
+                    "input" => {tv name=image},
                     "options" => "&w=480&h=640&zc=0&aoe=0&far=0&q=70"
                     ] assign=thumb}
                     <div class="section__cell--bg grid__cell l5 xl4 hide-on-med-and-down" style="background-image:url({$thumb});"></div>

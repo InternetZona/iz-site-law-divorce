@@ -3,7 +3,7 @@
         <div class="col s12 m8 l7">
             <a href="tel:[[++site.phone:strip]]" class="link header__item">
                 <i class="header__icon icon-phone tiny"></i>
-                [[++site.phone]]
+                <span class="black-text text--bold">[[++site.phone]]</span>
             </a>
             <span class="header__item header__item--address hide-on-small-and-down header__item--delimiter-left">
                 <i class="header__icon icon-clock tiny"></i>
