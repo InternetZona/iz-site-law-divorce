@@ -184,6 +184,9 @@
         background: $custom-color-1;
         color: white;
         margin: 0;
+        min-height: 88px;
+        display: flex!important;
+        align-items: center;
 
         &:before{
           content: "";
@@ -204,6 +207,10 @@
           border-right-color: transparent;
           border-bottom-color: transparent;
 
+        }
+
+        > span {
+          margin: auto;
         }
       }
 

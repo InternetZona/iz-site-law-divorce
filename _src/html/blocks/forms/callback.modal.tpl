@@ -2,7 +2,7 @@
 
 <form name="feedback" class="form form--feedback">
     <input type="hidden" name="action" value="form">
-    <input type="hidden" name="comment" value="Заказ обратного звонка. (Консультация).">
+    <input type="hidden" name="comment" value="Заказ обратного звонка. (Услуга: {field name=pagetitle}).">
     <div class="row">
         <div class="input-field col s12 m6">
             <input id="name-{$key}" type="text" name="username">

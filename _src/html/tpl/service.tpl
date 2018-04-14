@@ -8,9 +8,9 @@
                     <div class="grid__cell s12 m12 l7 xl8">
                         <h1>{field name=pagetitle}</h1>
                         <div class="section__content">
-                            <p>
-                                {field name=introtext}
-                            </p>
+                            <div class="page__content">
+                                {tv name=shortDescription}
+                            </div>
                             {include file="blocks/sections/callback.tpl"}
 
                         </div>

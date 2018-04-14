@@ -20,7 +20,7 @@
                                     <div class="card card--service">
                                         <div class="card-content">
                                             <span class="card-title"><a href="{$object.uri}">{$object.pagetitle}</a></span>
-                                            <p>{$object.tvs.shortDescription.value} <a href="{$object.uri}">Подробнее</a></p>
+                                            <p>{$object.introtext} <a href="{$object.uri}">Подробнее</a></p>
                                         </div>
                                         <div class="card-action left-align">
                                             <a data-service-id="{$object.id}" href="#modal-service" class="btn waves-effect waves-light right modal-trigger">Заказать</a>
