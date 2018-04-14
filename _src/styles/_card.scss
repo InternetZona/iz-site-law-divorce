@@ -150,11 +150,96 @@
     .card-content {
       text-align: center;
 
-      span {
-        @extend .h4;
-        line-height:36px;
-        background: white;
+      p{
+        @media (max-width: 1409px) {
+          margin-top: 1rem;
+        }
+
+        @media (min-width: 1410px) {
+          display: inline-block;
+          margin-left: 2rem;
+          line-height: 30px;
+          height: 36px;
+        }
+      }
+    }
+  }
+
+  &--service-panel{
+    @extend .z-depth-0;
+    margin-left: auto;
+    margin-right: auto;
+    @media #{$small-and-down} {
+      max-width: 320px;
+    }
+
+    .card-content{
+      padding: 0;
+      text-align: center;
+
+      .card-title{
+        @extend .h5;
         position: relative;
+        padding: 12px 24px;
+        background: $custom-color-1;
+        color: white;
+        margin: 0;
+        min-height: 88px;
+        display: flex!important;
+        align-items: center;
+
+        &:before{
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 0;
+          border: 12px solid darken($custom-color-1, 10%);
+          border-left-color: transparent;
+          border-bottom-color: transparent;
+        }
+
+        &:after{
+          content: "";
+          position: absolute;
+          top: 100%;
+          right: 0;
+          border: 12px solid darken($custom-color-1, 10%);
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+
+        }
+
+        > span {
+          margin: auto;
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+        padding: 24px;
+        margin-left: 24px;
+        margin-right: 24px;
+        border-left: 1px solid color('grey', 'lighten-3');
+        border-right: 1px solid color('grey', 'lighten-3');
+      }
+    }
+
+    .card-action{
+      margin-left: 24px;
+      margin-right: 24px;
+      border: 1px solid color('grey', 'lighten-3');
+      position: relative;
+
+      &:before{
+        content: "";
+        position:absolute;
+        z-index: -1;
+        width:96%;
+        bottom: 0;
+        height: 10px;
+        left: 2%;
+        border-radius: 100px / 5px;
+        box-shadow:0 0 18px rgba(0,0,0,0.6);
       }
     }
   }

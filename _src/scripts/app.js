@@ -1,6 +1,7 @@
 'use strict'
 // Import Materialize javascript library
 //= ../node_modules/materialize-css/dist/js/materialize.min.js
+//= ../node_modules/swiper/dist/js/swiper.js
 
 // Initialize GreenSock plugin
 //= ../node_modules/gsap/TweenLite.js
@@ -43,6 +44,31 @@ var App = {
       _map();
       _dropdown();
       _jqPluginsInit();
+
+    if (document.querySelector('.swiper-container') !== null) {
+      new Swiper ('.swiper-container', {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 3,
+        autoHeight: true,
+        roundLengths: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          600: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          },
+          // when window width is <= 640px
+          992: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          }
+        }
+      });
+    }
 
       window.onscroll = function () {
           if (window.pageYOffset > 0) {

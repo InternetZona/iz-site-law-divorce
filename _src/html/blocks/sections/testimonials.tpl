@@ -18,21 +18,26 @@
                     {$tvTestimonials = $object.tvs.testimonials.value|json_decode:true|array_slice:-10}
 
                     {if is_array($tvTestimonials)}
-                        <div id="carousel-testimonials" class="carousel carousel--testimonials carousel-slider" data-speed="4000">
 
-                            {foreach $tvTestimonials as $data}
-                                <div class="carousel-item carousel__item carousel__item--cols-2" href="#slide-{$data.MIGX_id}">
-                                    <div class="card">
-                                        <div class="card-content">
-                                            <p>{$data.text}</p>
-                                        </div>
-                                        <div class="card-action">
-                                            <p>{$data.autor}</p>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                {foreach $tvTestimonials as $data}
+                                    <div class="swiper-slide">
+                                        <div class="card">
+                                            <div class="card-content">
+                                                <p>{$data.text}</p>
+                                            </div>
+                                            <div class="card-action">
+                                                <p>{$data.autor}</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            {/foreach}
+                                {/foreach}
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
                         </div>
+
                     {/if}
                 </div>
                 {include file="blocks/buttons/viewmore.tpl" title="Все отзывы" uri=$object.uri}

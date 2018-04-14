@@ -40,7 +40,8 @@
     "gulp-uglify": "^3.0.0",
     "materialize-css": "^1.0.0-alpha.4",
     "path": "^0.12.7",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "swiper": "^4.2.2"
   },
   "devDependencies": {
     "imask": "^3.1.2"

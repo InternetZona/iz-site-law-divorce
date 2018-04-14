@@ -8,15 +8,15 @@
                     <div class="grid__cell s12 m12 l7 xl8">
                         <h1>{field name=pagetitle}</h1>
                         <div class="section__content">
-                            <p>
-                                {field name=introtext}
-                            </p>
-                            {include file="blocks/sections/cost.tpl"}
+                            <div class="page__content">
+                                {tv name=shortDescription}
+                            </div>
+                            {include file="blocks/sections/callback.tpl"}
 
                         </div>
                     </div>
                     {snippet name="phpthumbof" params=[
-                    "input" => "{$template_url}images/peoples/w01.png",
+                    "input" => {tv name=image},
                     "options" => "&w=480&h=640&zc=0&aoe=0&far=0&q=70"
                     ] assign=thumb}
                     <div class="section__cell--bg grid__cell l5 xl4 hide-on-med-and-down" style="background-image:url({$thumb});"></div>
@@ -29,6 +29,10 @@
         <div class="page__content">
             {field name=content}
         </div>
+    </div>
+
+    <div class="section container">
+        {include file="blocks/widgets/service.panel.tpl"}
     </div>
 
     {assign var=params value=[
@@ -82,4 +86,8 @@
             </div>
         </section>
     </div>
+{/block}
+
+{block name=modals append}
+    {include file="blocks/modals/service.tpl"}
 {/block}
