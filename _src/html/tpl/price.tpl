@@ -24,7 +24,17 @@
                         <tbody>
                         {foreach $tvPrices as $data}
                             <tr>
-                                <td>{$data.name}</td>
+                                <td>
+                                    {if $data.pageId}
+
+                                        <a href="{$modx->makeUrl($data.pageId)}">{$data.name}</a>
+
+                                        {else}
+
+                                        {$data.name}
+
+                                    {/if}
+                                </td>
                                 <td>{if $data.min}от {/if}{$data.cost|number_format:0:",":" "}</td>
                             </tr>
                         {/foreach}
