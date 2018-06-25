@@ -8,13 +8,13 @@
     <div class="nav-wrapper">
         {if {config name=site_start} == $modx->resource->id}
             <span class="brand-logo">
-                <img src="{$template_url}images/logo.png" class="responsive-img" />
+                <img src="assets/images/logo_razvody.png" class="responsive-img" />
                 Юрпрофит
                 <small>Расторжение брака</small>
             </span>
             {else}
             <a href="{$modx->makeUrl({config name=site_start})}" class="brand-logo">
-                <img src="{$template_url}images/logo.png" class="responsive-img" />
+                <img src="assets/images/logo_razvody.png" class="responsive-img" />
                 Юрпрофит
                 <small>Расторжение брака</small>
             </a>
