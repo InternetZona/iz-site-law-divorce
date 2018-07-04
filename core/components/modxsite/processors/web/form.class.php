@@ -38,6 +38,9 @@ class modWebFormProcessor extends modSiteWebFormProcessor
             case 'feedback':
                 $subject = "Вопрос с сайта Разводы.";
                 break;
+            case 'ask':
+                $subject = "Вопрос юристу с сайта Разводы.";
+                break;
             default:
                 $site_name = $this->modx->getOption('site_name');
                 $subject = "Сообщение с сайта {$site_name}";

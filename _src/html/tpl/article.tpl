@@ -9,6 +9,8 @@
             <div class="col l8">
                 <div class="page__content">
                     {field name=content}
+
+                   {include file="blocks/forms/ask.tpl"}
                 </div>
             </div>
             <div class="col l4">

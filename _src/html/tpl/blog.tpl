@@ -41,11 +41,7 @@
                         {/foreach}
 
                     </div>
-
-                    <div claas="text-center">
-                        [[+page.nav]]
-                    </div>
-
+                    <div class="pagination">[[+page.nav]]</div>
                 {/if}
             </div>
         </div>

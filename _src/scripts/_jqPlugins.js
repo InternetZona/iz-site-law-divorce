@@ -73,7 +73,7 @@ function _jqPluginsInit() {
                                         if (response.success) {
 
                                             switch ($form.attr('name')) {
-                                                case "feedback":
+                                                case "feіedback":
                                                     gtag('event', 'send', {'event_category': 'form-feedback'});
                                                     yaCounter48211868.reachGoal('form-feedback');
                                                     break;

@@ -35,6 +35,21 @@
         {include file="blocks/widgets/service.panel.tpl"}
     </div>
 
+    <section class="section section--price">
+        <div class="container">
+            <div class="card z-depth-3">
+                <div class="card-content">
+                    <div class="table-wrapper">
+                        <div class="section__title">Схема работы</div>
+                        <div class="grid no-bottom-margin">
+                            {tv name=scheme_of_work}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {assign var=params value=[
         'id'    => 7,
         'current'   => true,

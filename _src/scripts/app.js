@@ -15,6 +15,8 @@
 //= _dropdown.js
 //= _jqPlugins.js
 
+// проверка
+
 var _arr 	= {};
 function loadScript(scriptName, callback) {
 

@@ -24,6 +24,7 @@
                                 <span>[[++site.worktime]]</span>
                             </li>
                         </ul>
+                        {tv name=requisites}
                     </div>
                     <div class="col s12 m7 offset-xl1 xl6">
                         <div class="form-wrapper">

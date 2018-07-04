@@ -23,6 +23,21 @@
 
     {include file="blocks/sections/price.tpl"}
 
+    <section class="section section--price grey-lighten">
+        <div class="container">
+            <div class="card z-depth-3">
+                <div class="card-content">
+                    <div class="table-wrapper">
+                        <div class="section__title">Схема работы</div>
+                        <div class="grid no-bottom-margin">
+                        {tv name=scheme_of_work}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
     {include file="blocks/sections/aboutus.tpl"}
 
     <div class="section-wrapper grey-lighten section--form">
