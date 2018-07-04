@@ -1,5 +1,4 @@
 {extends file="page.tpl"}
-
 {block name=content append}
     <section class="section section--contacts">
         <div class="container">
@@ -26,6 +25,7 @@
                                 <span>[[++site.worktime]]</span>
                             </li>
                         </ul>
+                        {tv name=requisites}
                     </div>
                     <div class="col s12 m7 xl6">
                         <div class="form-wrapper">
